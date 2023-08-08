@@ -1,0 +1,30 @@
+vector<int> moveZeros(int n, vector<int> a) {
+    // int n1;
+    // while (true) {
+    //   auto it = find(a.begin(), a.end(), 0);
+    //   if (it != a.end()) {
+    //     a.erase(it);
+    //   }
+    //   else
+    //   break;
+    // }
+    // n1 = a.size();
+    // for(int i = 0;i<n-n1;i++)
+    // a.push_back(0);
+
+    //TWO POINTER APPROACH 
+    // More efficient
+    int writeIdx = 0;
+    for(int readIdx = 0;readIdx < n;readIdx++)
+    {
+        if(a[readIdx] != 0){
+            a[writeIdx] = a[readIdx];
+            writeIdx++;
+        }
+    }
+    while(writeIdx < n){
+        a[writeIdx] = 0;
+        writeIdx++;
+    }
+    return a;
+}
