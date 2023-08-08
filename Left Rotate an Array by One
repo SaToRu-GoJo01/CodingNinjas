@@ -1,0 +1,5 @@
+#include <bits/stdc++.h> 
+vector<int> rotateArray(vector<int>& arr, int n) {
+    rotate(arr.begin(),arr.begin()+1,arr.end());
+    return arr;
+}
