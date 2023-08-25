@@ -7,9 +7,8 @@ bool possible(vector<int>&arr,int limit,int current){
 }
 int smallestDivisor(vector<int>& arr, int limit)
 {
-	int low = INT_MAX,high = INT_MIN,ans;
+	int low = 1,high = INT_MIN,ans;
 	for(auto i: arr){
-		low = min(low,i);
 		high = max(high,i);
 	}
 	while(low <= high){
