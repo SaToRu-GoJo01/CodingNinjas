@@ -5,7 +5,7 @@ int missingK(vector<int> vec, int n, int k) {
     while(low <= high){
         int mid = low + (high - low)/2;
         // cout << " - " << vec[mid] << endl;
-        if((vec[mid]- mid - 1)>k){
+        if((vec[mid]- mid - 1)>=k){
             high = mid - 1;
         }
         else{
