@@ -30,9 +30,9 @@ int findAllSubarraysWithGivenSum(vector < int > & arr, int k) {
         sum += arr[i];
         int x = sum - k;
         if(mp.find(x) != mp.end()){
-            count++;
+            count+=mp[x];
         }
-        mp[sum] = i;
+        mp[sum]++;
     }
     return count;
 }
